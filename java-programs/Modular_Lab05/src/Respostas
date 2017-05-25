@@ -1,0 +1,10 @@
+Respostas dos exercicios:
+
+1. Feito em sala
+
+2 e 3. Criado a partir do modelo disponibilizado pelo professor.
+
+4. O método clone é necessário na classe PilhaInt para que ele possa retornar o clone de um objeto da classe PilhaInt,
+de forma que se o método for comentado ocorre problema ao compilar o código, indicando que o novo objeto não pode ser clonado
+pois o metodo clone da classe Object retorna uma instância de Object, e não da classe desejada.
+
