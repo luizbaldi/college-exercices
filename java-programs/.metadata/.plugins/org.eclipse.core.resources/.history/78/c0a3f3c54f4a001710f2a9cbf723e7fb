@@ -1,0 +1,23 @@
+public class OrderList {
+	private int[] list;
+	
+	OrderList(int tam) {
+		list = new int[tam];
+	}
+	
+	public void add(int value) {
+		
+	}
+	
+	public void bubblesort() {
+		int[] sortedArray = Bubblesort.sort(list);
+		
+		printArray(sortedArray);
+	}
+	
+	public void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println("array[" + i + "] = " + array[i]);
+		}
+	}
+}

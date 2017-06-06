@@ -1,0 +1,31 @@
+public class OrderList {
+	private int sentinel;
+	private int[] list;
+	
+	OrderList(int tam) {
+		list = new int[tam];
+		sentinel = 1;
+	}
+	
+	public void add(int value) {
+		int l = list.length ;
+		if (list.length < sentinel) {
+			list[sentinel] = value;
+			sentinel++;	
+		} else {
+			System.out.println("Array is already filled.");
+		}
+	}
+	
+	public void bubblesort() {
+		int[] sortedArray = Bubblesort.sort(list);
+		
+		printArray(sortedArray);
+	}
+	
+	public void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println("array[" + i + "] = " + array[i]);
+		}
+	}
+}

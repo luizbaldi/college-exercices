@@ -1,0 +1,19 @@
+public class ListaOrdenacao {
+	private int[] lista;
+	
+	ListaOrdenacao(int tam) {
+		lista = new int[tam];
+	}
+	
+	public void bubblesort() {
+		int[] sortedArray = Bubblesort.sort(lista);
+		
+		printArray(sortedArray);
+	}
+	
+	public void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println("array[" + i + "] = " + array[i]);
+		}
+	}
+}

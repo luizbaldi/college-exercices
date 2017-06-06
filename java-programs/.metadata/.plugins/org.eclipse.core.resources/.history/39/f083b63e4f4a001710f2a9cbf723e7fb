@@ -1,0 +1,11 @@
+public class ListaOrdenacao {
+	private Integer[] lista;
+	
+	ListaOrdenacao(int tam) {
+		lista = new Integer[tam];
+	}
+	
+	public void bubblesort() {
+		
+	}
+}

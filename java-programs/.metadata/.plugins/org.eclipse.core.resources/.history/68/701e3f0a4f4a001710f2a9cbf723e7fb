@@ -1,0 +1,7 @@
+public class ListaOrdenacao {
+	private int[] lista;
+	
+	ListaOrdenacao(int tam) {
+		lista = new int[tam];
+	}
+}

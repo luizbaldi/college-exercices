@@ -1,0 +1,3 @@
+public class ListaOrdenacao {
+	private int[] lista;
+}

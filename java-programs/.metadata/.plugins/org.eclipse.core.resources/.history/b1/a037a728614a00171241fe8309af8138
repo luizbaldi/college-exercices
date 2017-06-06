@@ -1,0 +1,9 @@
+
+public class SelectionSort {
+
+	public static void sort(int[] array) {
+		for (int fixed = 0; i < array.length - 1; fixed++) {
+			int smaller = fixed;
+		}
+	}
+}
