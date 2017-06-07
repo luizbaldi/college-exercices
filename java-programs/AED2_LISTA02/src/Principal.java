@@ -70,10 +70,10 @@ public class Principal {
 	                imprimeIdadeMedia(alunos);
 	                break;
 	            case 4:
-	                System.out.println("Obrigado por utilizar nosso sistema.");
+	                System.out.println("\nObrigado por utilizar nosso sistema.");
 	                break;
 	            default:
-	                System.out.println("A opcao selecionada nao e valida, digite novamente");
+	                System.out.println("\nA opcao selecionada nao e valida, digite novamente");
 	        }
 		}
 	}

@@ -1,7 +1,7 @@
 
 public class InsertionSort {
 
-	public static int[] sort(int[] array) {
+	public static void sort(int[] array) {
 		int j, key, i;
 		
 		for (j = 1; j < array.length; j++) {
@@ -13,7 +13,5 @@ public class InsertionSort {
 			
 			array[i + 1] = key;
 		}
-		
-		return array;
 	}
 }

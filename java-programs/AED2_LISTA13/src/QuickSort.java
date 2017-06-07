@@ -1,0 +1,38 @@
+
+public class QuickSort {
+	
+	public static void sort(int[] array) {
+		sort(array, 0, array.length -1);
+	}
+
+	private static void sort(int[] array, int start, int end) {
+        if (start < end) {
+           int pivotPosition = separar(array, start, end);
+           sort(array, start, pivotPosition - 1);
+           sort(array, pivotPosition + 1, end);
+        }
+	}
+
+	private static int separar(int[] array, int start, int end) {
+        int pivot = array[start];
+        int i = start + 1, f = end;
+
+        while (i <= f) {
+			if (array[i] <= pivot) {
+				i++;
+			} else if (pivot < array[f]) {
+				f--;
+			} else {
+				int troca = array[i];
+				array[i] = array[f];
+				array[f] = troca;
+				i++;
+				f--;
+			}
+        }
+
+        array[start] = array[f];
+        array[f] = pivot;
+        return f;
+	}
+}

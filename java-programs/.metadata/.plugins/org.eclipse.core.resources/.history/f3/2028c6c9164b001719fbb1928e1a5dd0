@@ -1,0 +1,21 @@
+
+public class SelectionSort {
+
+	public static int[] sort(int[] array) {
+		for (int fixed = 0; fixed < array.length - 1; fixed++) {
+			int smaller = fixed;
+			
+			for (int i = smaller; i < array.length; i++) {
+				if (array[i] < array[smaller]) {
+					smaller = i;
+				}
+			}
+			
+			if (smaller != fixed) {
+				int aux = array[fixed];
+				array[fixed] = array[smaller];
+				array[smaller] = aux;
+			}
+		}
+	}
+}

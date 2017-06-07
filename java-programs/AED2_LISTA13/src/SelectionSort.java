@@ -1,7 +1,7 @@
 
 public class SelectionSort {
 
-	public static int[] sort(int[] array) {
+	public static void sort(int[] array) {
 		for (int fixed = 0; fixed < array.length - 1; fixed++) {
 			int smaller = fixed;
 			
@@ -17,7 +17,5 @@ public class SelectionSort {
 				array[smaller] = aux;
 			}
 		}
-		
-		return array;
 	}
 }

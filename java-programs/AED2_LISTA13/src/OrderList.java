@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class OrderList {
 	private int sentinel;
 	private int[] list;
@@ -16,6 +18,13 @@ public class OrderList {
 		}
 	}
 	
+	public void fillWithRandValues() {
+		Random rand = new Random();
+		for (int i = 0; i < list.length; i++) {
+			list[i] = rand.nextInt(50) + 1;
+		}
+	}
+	
 	public void bubbleSort() {
 		int[] sortedArray = BubbleSort.sort(list);
 		
@@ -23,15 +32,33 @@ public class OrderList {
 	}
 	
 	public void selectionSort() {
-		int[] sortedArray = SelectionSort.sort(list);
+		SelectionSort.sort(list);
 		
-		printArray(sortedArray);
+		printArray(list);
 	}
 	
 	public void insertionSort() {
-		int[] sortedArray = InsertionSort.sort(list);
+		InsertionSort.sort(list);
 		
-		printArray(sortedArray);
+		printArray(list);
+	}
+	
+	public void shellSort() {
+		ShellSort.sort(list);
+		
+		printArray(list);
+	}
+	
+	public void quickSort() {
+		QuickSort.sort(list);
+		
+		printArray(list);
+	}
+	
+	public void heapSort() {
+		HeapSort.sort(list);
+		
+		printArray(list);
 	}
 	
 	public void printArray(int[] array) {

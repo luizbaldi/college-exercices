@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class Main {
+	static Scanner in = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int arraySize = loadArraySize();
+		OrderList list = new OrderList(arraySize);
+
+		int op = -1;
+		while (op != 0) {
+			op = loadMenu();
+
+			switch (op) {
+				case 0:
+					System.out.println("\nObrigado por utilizar o sistema.");
+					break;
+				case 1:
+					list.fillWithRandValues();
+					break;
+				case 2:
+					list.printArray();
+					break;
+				case 3:
+					list.selectionSort();
+					break;
+				case 4:
+					list.insertionSort();
+					break;
+				case 6:
+					list.bubbleSort();
+					break;
+				default:
+					System.out.println("\nOpção inválida. Tente novamente.");
+			}
+		}
+	}
+
+	public static void fillList(OrderList list) {
+		list.add(3);
+		list.add(6);
+		list.add(1);
+		list.add(10);
+		list.add(2);
+	}
+
+	public static int loadArraySize() {
+		System.out.print("Digite o tamanho do array: ");
+		return in.nextInt();
+	}
+
+	public static int loadMenu() {
+		int resp;
+
+	    System.out.println("\n================== Menu de opcoes ==================\n");
+	    System.out.println("1. Preencher arrajo com valores aleatórios");
+	    System.out.println("2. Escrever arranjo");
+	    System.out.println("3. Ordernar pelo algoritmo de seleção");
+	    System.out.println("4. Ordernar pelo algoritmo de inserção");
+	    System.out.println("6. Ordernar pelo algoritmo BubbleSort");
+	    System.out.println("\n0. Sair");
+	    System.out.print("\nSelecione a opcao desejada: ");
+	    resp = in.nextInt();
+
+	    return resp;
+	}
+}
